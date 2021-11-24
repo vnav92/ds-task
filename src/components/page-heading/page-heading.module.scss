@@ -1,0 +1,6 @@
+@import '../../styles/spacing.scss';
+
+.header {
+  font-size: calc(#{$default-spacing} * 4);
+  margin: 0 0 calc(#{$default-spacing} / 2);
+}
