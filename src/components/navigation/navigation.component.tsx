@@ -12,14 +12,19 @@ export const Navigation = () => {
   return (
     <nav className={styles.navWrapper}>
       <ul className={styles.listWrapper}>
-        {NAVIGATION_ITEMS.map(item => (
+        {NAVIGATION_ITEMS.map((item) => (
           <li className={styles.listItem} key={item.route}>
             <Link className={styles.link} to={item.route}>
-              <Icon component={item.icon} className={classNames(styles.icon, { [styles.activeIcon]: pathname === item.route })}/>
+              <Icon
+                component={item.icon}
+                className={classNames(styles.icon, {
+                  [styles.activeIcon]: pathname === item.route,
+                })}
+              />
             </Link>
           </li>
         ))}
       </ul>
     </nav>
-  )
-}
+  );
+};

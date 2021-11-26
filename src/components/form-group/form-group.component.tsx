@@ -4,17 +4,17 @@ import { Form } from 'antd';
 import styles from './form-group.module.scss';
 
 type FormGroupProps = {
-  label: React.ReactNode,
+  label: React.ReactNode;
   validationError: React.ReactNode | null;
   htmlFor: string;
-  children: React.ReactNode,
-}
+  children: React.ReactNode;
+};
 
 export const FormGroup: React.FC<FormGroupProps> = ({
   label,
   validationError,
   htmlFor,
-  children
+  children,
 }) => {
   return (
     <>
@@ -29,6 +29,5 @@ export const FormGroup: React.FC<FormGroupProps> = ({
         {children}
       </Form.Item>
     </>
-  
-  )
-}
+  );
+};
