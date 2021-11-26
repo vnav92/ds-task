@@ -1,7 +1,5 @@
-import { PageHeading } from '../../components/page-heading/page-heading.component';
+import { PageHeading } from '../../components/page-heading/page-heading.component'
 
 export const Profile = () => {
-  return (
-    <PageHeading>Profile</PageHeading>
-  )
+  return <PageHeading>Profile</PageHeading>
 }

@@ -1,13 +1,13 @@
-import { ProfileOutlined, EditOutlined } from '@ant-design/icons';
+import { ProfileOutlined, EditOutlined } from '@ant-design/icons'
 
 type NavigationItem = {
-  route: string;
-  icon: React.ForwardRefExoticComponent<any>,
+  route: string
+  icon: React.ForwardRefExoticComponent<any>
 }
 
 export enum ApplicationRoutes {
   FORM = '/form',
-  PROFILE = '/profile',
+  PROFILE = '/profile'
 }
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [

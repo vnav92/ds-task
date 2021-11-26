@@ -1,13 +1,13 @@
-import React from 'react';
-import { Form } from 'antd';
+import React from 'react'
+import { Form } from 'antd'
 
-import styles from './form-group.module.scss';
+import styles from './form-group.module.scss'
 
 type FormGroupProps = {
-  label: React.ReactNode,
-  validationError: React.ReactNode | null;
-  htmlFor: string;
-  children: React.ReactNode,
+  label: React.ReactNode
+  validationError: React.ReactNode | null
+  htmlFor: string
+  children: React.ReactNode
 }
 
 export const FormGroup: React.FC<FormGroupProps> = ({
@@ -29,6 +29,5 @@ export const FormGroup: React.FC<FormGroupProps> = ({
         {children}
       </Form.Item>
     </>
-  
   )
 }
