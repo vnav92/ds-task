@@ -1,1 +1,1 @@
-export { fetchData, saveData } from './data-handling'
+export { fetchData, saveData } from './data-handling';

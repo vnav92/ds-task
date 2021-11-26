@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react'
-import { Avatar, Typography } from 'antd'
-import { PageHeading } from '../../components/page-heading/page-heading.component'
-import { fetchData } from '../../api'
-import { formInitialValues } from '../form/form.form'
+import { useEffect, useState } from 'react';
+import { Avatar, Typography } from 'antd';
+import { PageHeading } from '../../components/page-heading/page-heading.component';
+import { fetchData } from '../../api';
+import { formInitialValues } from '../form/form.form';
 
-import styles from './profile.module.scss'
+import styles from './profile.module.scss';
 
-const { Title, Text } = Typography
+const { Title, Text } = Typography;
 
 export const Profile = () => {
   const [profileData, setProfileData] = useState<
     typeof formInitialValues | null
-  >(null)
+  >(null);
 
   useEffect(() => {
-    setProfileData(fetchData() || null)
-  }, [])
+    setProfileData(fetchData() || null);
+  }, []);
 
   return (
     <>
@@ -38,5 +38,5 @@ export const Profile = () => {
         <p>empty</p>
       )}
     </>
-  )
-}
+  );
+};

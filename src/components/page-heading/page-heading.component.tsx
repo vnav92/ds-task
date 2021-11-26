@@ -1,11 +1,11 @@
-import classNames from 'classnames'
+import classNames from 'classnames';
 
-import styles from './page-heading.module.scss'
+import styles from './page-heading.module.scss';
 
 type PageHeadingProps = {
-  children: React.ReactNode
-  className?: string
-} & React.HTMLProps<HTMLHeadingElement>
+  children: React.ReactNode;
+  className?: string;
+} & React.HTMLProps<HTMLHeadingElement>;
 
 export const PageHeading: React.FC<PageHeadingProps> = ({
   className,
@@ -17,4 +17,4 @@ export const PageHeading: React.FC<PageHeadingProps> = ({
       {children}
     </h1>
   </header>
-)
+);

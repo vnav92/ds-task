@@ -1,1 +1,1 @@
-export { ImageUpload } from './image-upload.component'
+export { ImageUpload } from './image-upload.component';

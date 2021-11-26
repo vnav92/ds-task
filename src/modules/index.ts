@@ -1,2 +1,2 @@
-export { Form } from './form'
-export { Profile } from './profile'
+export { Form } from './form';
+export { Profile } from './profile';

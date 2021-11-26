@@ -1,11 +1,11 @@
-import { ComponentProps } from 'react'
-import { FieldProps } from 'formik'
-import { Input, Tooltip } from 'antd'
-import { InfoCircleOutlined } from '@ant-design/icons'
+import { ComponentProps } from 'react';
+import { FieldProps } from 'formik';
+import { Input, Tooltip } from 'antd';
+import { InfoCircleOutlined } from '@ant-design/icons';
 
 type TextInputProps = {
-  tooltipContent?: React.ReactNode
-}
+  tooltipContent?: React.ReactNode;
+};
 
 export const TextInput: React.FC<
   TextInputProps & FieldProps & ComponentProps<typeof Input>
@@ -21,4 +21,4 @@ export const TextInput: React.FC<
     {...field}
     {...props}
   />
-)
+);

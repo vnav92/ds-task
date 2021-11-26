@@ -1,4 +1,4 @@
-import * as Yup from 'yup'
+import * as Yup from 'yup';
 
 export const formInitialValues = {
   firstName: '',
@@ -7,13 +7,13 @@ export const formInitialValues = {
   phoneNumber: '',
   birthdayDate: '',
   about: '',
-  avatar: ''
-}
+  avatar: '',
+};
 
 const getTooShortMessage = (minLength: number) =>
-  `Please provide at least ${minLength} digits`
+  `Please provide at least ${minLength} digits`;
 const getTooLongMessage = (name: string, maxLength: number) =>
-  `${name} should be shorter than ${maxLength} digits`
+  `${name} should be shorter than ${maxLength} digits`;
 
 export const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -43,5 +43,5 @@ export const validationSchema = Yup.object().shape({
     .required('Required')
     .min(5, getTooShortMessage(10))
     .max(500, getTooLongMessage('Description', 500)),
-  avatar: Yup.string().required('Required')
-})
+  avatar: Yup.string().required('Required'),
+});

@@ -1,4 +1,4 @@
-import { Formik, Form as FormikForm, Field } from 'formik'
+import { Formik, Form as FormikForm, Field } from 'formik';
 
 import {
   PageHeading,
@@ -6,22 +6,22 @@ import {
   TextInput,
   DatePicker,
   TextArea,
-  ImageUpload
-} from '../../components'
-import { Row, Col } from 'antd'
-import { useNavigate } from 'react-router'
+  ImageUpload,
+} from '../../components';
+import { Row, Col } from 'antd';
+import { useNavigate } from 'react-router';
 
-import { ApplicationRoutes } from '../../components/navigation/navigation.const'
-import { saveData, fetchData } from '../../api'
-import { formInitialValues, validationSchema } from './form.form'
+import { ApplicationRoutes } from '../../components/navigation/navigation.const';
+import { saveData, fetchData } from '../../api';
+import { formInitialValues, validationSchema } from './form.form';
 
 export const Form: React.FC<any> = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubit = (data: typeof formInitialValues) => {
-    saveData(data)
-    navigate(ApplicationRoutes.PROFILE)
-  }
+    saveData(data);
+    navigate(ApplicationRoutes.PROFILE);
+  };
 
   return (
     <>
@@ -115,5 +115,5 @@ export const Form: React.FC<any> = () => {
         )}
       </Formik>
     </>
-  )
-}
+  );
+};

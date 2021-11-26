@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import { MainLayout } from './components'
-import { ApplicationRoutes } from './components/navigation/navigation.const'
-import { Form, Profile } from './modules'
+import { MainLayout } from './components';
+import { ApplicationRoutes } from './components/navigation/navigation.const';
+import { Form, Profile } from './modules';
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
         </Routes>
       </MainLayout>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
