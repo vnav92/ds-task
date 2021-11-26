@@ -1,9 +1,8 @@
 @import '../../styles/spacing.scss';
 @import '../../styles/colors.scss';
 
-$nav-wrapper-width: 50px;
-
 .navWrapper {
+  position: fixed;
   width: $nav-wrapper-width;
   height: 100%;
   background-color: $primary-color;

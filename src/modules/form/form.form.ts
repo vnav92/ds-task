@@ -6,7 +6,8 @@ export const formInitialValues = {
   emailAddress: '',
   phoneNumber: '',
   birthdayDate: '',
-  about: ''
+  about: '',
+  avatar: ''
 }
 
 const getTooShortMessage = (minLength: number) =>
@@ -41,5 +42,6 @@ export const validationSchema = Yup.object().shape({
   about: Yup.string()
     .required('Required')
     .min(5, getTooShortMessage(10))
-    .max(500, getTooLongMessage('Description', 500))
+    .max(500, getTooLongMessage('Description', 500)),
+  avatar: Yup.string().required('Required')
 })

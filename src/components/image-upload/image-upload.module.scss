@@ -1,0 +1,7 @@
+.imageUploadError {
+  :global {
+    .ant-upload-select .ant-upload {
+      border: 1px solid red;
+    }
+  }
+}
