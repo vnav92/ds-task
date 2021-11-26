@@ -12,5 +12,7 @@ export const PageHeading: React.FC<PageHeadingProps> = ({
   children,
   ...props
 }) => (
-  <h1 className={classNames(styles.header, className)} {...props}>{children}</h1>
+  <header>
+    <h1 className={classNames(styles.header, className)} {...props}>{children}</h1>
+  </header>
 )
