@@ -26,7 +26,11 @@ export const Form: React.FC<any> = () => {
               <Field component={TextInput} name="emailAddress"/>
             </FormGroup>
             <FormGroup label="Phone number" htmlFor="phoneNumber" validationError={touched.phoneNumber && errors.phoneNumber}>
-              <Field component={TextInput} name="phoneNumber"/>
+              <Field
+                component={TextInput}
+                name="phoneNumber"
+                tooltipContent="Phone number must begin with country code, for example '+48' for Poland."
+              />
             </FormGroup>
             <FormGroup label="Birthday date" htmlFor="birthdayDate" validationError={touched.birthdayDate && errors.birthdayDate}>
               <Field component={DatePicker} name="birthdayDate"/>

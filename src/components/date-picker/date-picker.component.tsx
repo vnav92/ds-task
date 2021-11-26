@@ -10,8 +10,8 @@ export const DatePicker: React.FC<FieldProps & ComponentProps<typeof AntDatePick
 }) => (
   <AntDatePicker
     {...field}
-    {...props}
     onChange={(date, dateString) => form.setFieldValue(field.name, dateString)}
     value={field.value ? moment(field.value) : null}
+    {...props}
   />
 )

@@ -15,7 +15,7 @@ const getTooLongMessage = (name: string, maxLength: number) => `${name} should b
 export const validationSchema = Yup.object().shape({
   firstName: Yup.string().required('Required').min(2, getTooShortMessage(2)).max(50, getTooLongMessage('First name', 50)),
   lastName: Yup.string().required('Required').min(2, getTooShortMessage(2)).max(100, getTooLongMessage('Last name', 100)),
-  emailAddress: Yup.string().email().required('Required').max(80, getTooLongMessage('Email', 80)),
+  emailAddress: Yup.string().email('Invalid email format').required('Required').max(80, getTooLongMessage('Email', 80)),
   phoneNumber: Yup.string()
     .required('Required')
     .test(
