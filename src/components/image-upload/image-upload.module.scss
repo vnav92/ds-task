@@ -1,0 +1,9 @@
+@import '../../styles/colors.scss';
+
+.imageUploadError {
+  :global {
+    .ant-upload-select {
+      border: 1px solid $red-color;
+    }
+  }
+}

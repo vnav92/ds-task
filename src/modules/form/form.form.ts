@@ -7,6 +7,7 @@ export const formInitialValues = {
   phoneNumber: '',
   birthdayDate: '',
   about: '',
+  avatar: ''
 }
 
 const getTooShortMessage = (minLength: number) => `Please provide at least ${minLength} digits`;
@@ -25,5 +26,6 @@ export const validationSchema = Yup.object().shape({
         Boolean(value && value[0] === '+' && !isNaN(value.slice(1) as unknown as number) && value.split('').length > 7)
     ),
   birthdayDate: Yup.string().required('Required'),
-  about: Yup.string().required('Required').min(5, getTooShortMessage(10)).max(500, getTooLongMessage('Description', 500))
+  about: Yup.string().required('Required').min(5, getTooShortMessage(10)).max(500, getTooLongMessage('Description', 500)),
+  avatar: Yup.string().required('Required')
 })
