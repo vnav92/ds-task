@@ -1,5 +1,6 @@
 @import '../../styles/spacing.scss';
 
+
 .wrapper {
   height: 100%;
   display: flex;
@@ -7,4 +8,6 @@
 
 .content {
   padding: calc(#{$default-spacing} * 2);
+  width: 100%;
+  margin-left: $nav-wrapper-width;
 }

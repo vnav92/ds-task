@@ -1,0 +1,10 @@
+@import '../../styles/colors.scss';
+
+.lengthCounter {
+  position: absolute;
+  right: 0;
+}
+
+.lengthCounterError {
+  color: red;
+}

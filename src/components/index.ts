@@ -5,3 +5,4 @@ export { FormGroup } from './form-group';
 export { Navigation } from './navigation';
 export { PageHeading } from './page-heading';
 export { TextArea } from './text-area';
+export { ImageUpload } from './image-upload';
