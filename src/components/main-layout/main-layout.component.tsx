@@ -1,4 +1,4 @@
-import { Navigation } from '../';
+import { Navigation, Footer } from '../';
 
 import styles from './main-layout.module.scss';
 
@@ -8,7 +8,12 @@ type MainLayoutProps = {
 
 export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => (
   <div className={styles.wrapper}>
-    <Navigation />
-    <main className={styles.content}>{children}</main>
+    <div className={styles.contentWrapper}>
+      <Navigation />
+      <main className={styles.content}>{children}</main>
+    </div>
+    <div className={styles.footer}>
+      <Footer />
+    </div>
   </div>
 );

@@ -9,7 +9,7 @@ const App = () => {
     <HashRouter>
       <MainLayout>
         <Routes>
-        <Route
+          <Route
             path="/"
             element={<Navigate replace to={ApplicationRoutes.PROFILE} />}
           />
