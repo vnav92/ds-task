@@ -9,12 +9,12 @@ const App = () => {
     <BrowserRouter>
       <MainLayout>
         <Routes>
-          <Route path={ApplicationRoutes.FORM} element={<Form />} />
-          <Route path={ApplicationRoutes.PROFILE} element={<Profile />} />
-          <Route
+        <Route
             path="/"
             element={<Navigate replace to={ApplicationRoutes.PROFILE} />}
           />
+          <Route path={ApplicationRoutes.FORM} element={<Form />} />
+          <Route path={ApplicationRoutes.PROFILE} element={<Profile />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>
