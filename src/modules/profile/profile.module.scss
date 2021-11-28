@@ -1,3 +1,9 @@
+@import '../../styles/colors.scss';
+@import '../../styles/spacing.scss';
+
+$user-name-font-size: 42px;
+$user-name-letter-spacing: 2px;
+
 .wrapper {
   width: 100%;
 }
@@ -5,4 +11,62 @@
 .avatar {
   margin: auto;
   display: block;
+  border: 2px solid $accent-color;
+}
+
+.dataProperty {
+  display: block;
+  text-align: center;
+  color: $white-color;
+  font-weight: 100;
+}
+
+.userName {
+  margin-bottom: 0;
+  line-height: $user-name-font-size;
+  font-size: $user-name-font-size;
+  letter-spacing: $user-name-letter-spacing;
+  opacity: 0.8;
+  margin-top: calc(#{$default-spacing} / 2);
+  padding: calc(#{$default-spacing} / 2);
+  width: 100%;
+}
+
+.userBirthdayDate {
+  opacity: 0.7;
+  width: 100%;
+}
+
+.sectionMarginTop {
+  margin-top: calc(#{$default-spacing} * 1.5)
+}
+
+.contactSection {
+  background: $accent-color;
+  display: inline-block;
+  padding: $default-spacing;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.aboutSection {
+  width: 60%;
+  max-height: 200px;
+  overflow-y: scroll;
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.textLink {
+  display: flex;
+  justify-content: center;
+}
+
+.linkIcon {
+  margin-left: calc(#{$default-spacing} / 2)
+}
+
+.contactDataProperty {
+  color: $content-background;
+  font-weight: 200;
 }

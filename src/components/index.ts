@@ -1,3 +1,4 @@
+export { Anchor } from './anchor';
 export { MainLayout } from './main-layout';
 export { Modal } from './modal';
 export { Button } from './button';
@@ -12,4 +13,3 @@ export { TextArea } from './text-area';
 export { ImageUpload } from './image-upload';
 export { Text } from './text';
 export { Title } from './title';
-export { PropertyValue } from './property-value';
