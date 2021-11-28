@@ -2,6 +2,7 @@ import { ComponentProps } from 'react';
 import { FieldProps } from 'formik';
 import { Input, Tooltip } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
+import classNames from 'classnames';
 
 import styles from './text-input.module.scss';
 
@@ -15,7 +16,7 @@ export const TextInput: React.FC<
 > = ({ field, form, tooltipContent, className, ...props }) => (
   <div className={styles.textInputWrapper}>
     <Input
-      className={className}
+      className={classNames({ [styles.errorTextInput]: form.touched[field.name] && form.errors[field.name] }, className)}
       suffix={
         tooltipContent && (
           <Tooltip title={tooltipContent}>
