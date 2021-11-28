@@ -14,3 +14,11 @@
     }
   }
 }
+
+.errorTextInput {
+  :global {
+    .anticon-info-circle {
+      color: $validation-error-color !important;
+    }
+  }
+}

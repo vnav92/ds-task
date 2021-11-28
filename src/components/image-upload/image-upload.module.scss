@@ -13,8 +13,8 @@ $image-upload-button-content-font-size: 36px;
 
 .imageUploadError {
   :global {
-    .ant-upload-select .ant-upload {
-      border: 1px solid $validation-error-color;
+    .ant-upload {
+      border-color: $validation-error-color;
     }
   }
 }

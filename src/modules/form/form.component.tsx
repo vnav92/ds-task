@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Formik, Form as FormikForm, Field, FormikState } from 'formik';
+import { Row, Col } from 'antd';
+import { useNavigate } from 'react-router';
 
 import {
   PageHeading,
@@ -13,13 +15,13 @@ import {
   Modal,
   Text,
 } from '../../components';
-import { Row, Col } from 'antd';
-import { useNavigate } from 'react-router';
-
 import { ApplicationRoutes } from '../../components/navigation/navigation.const';
 import { saveData, fetchData, resetData } from '../../api';
 import { formInitialValues, validationSchema } from './form.form';
-export const Form: React.FC<any> = () => {
+
+import styles from './form.module.scss';
+
+export const Form: React.FC = () => {
   const navigate = useNavigate();
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -127,7 +129,7 @@ export const Form: React.FC<any> = () => {
                 </FormGroup>
               </Col>
             </Row>
-            <Row gutter={[10, 10]}>
+            <Row gutter={[10, 10]} className={styles.formFooter}>
               <Col>
                 <Button htmlType="submit" type="primary">
                   Save
