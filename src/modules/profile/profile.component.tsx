@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Avatar, Row } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import classNames from 'classnames';
-import { PageHeading, Text, Anchor } from '../../components';
+import { PageHeading, Text, Anchor, NoDataInformation } from '../../components';
 import { fetchData } from '../../api';
 import { formInitialValues } from '../form/form.form';
 
@@ -89,7 +89,7 @@ export const Profile = () => {
           </Row>
         </div>
       ) : (
-        <p>empty</p>
+        <NoDataInformation />
       )}
     </>
   );

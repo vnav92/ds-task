@@ -57,7 +57,8 @@ $parentheses-font-size: 14px;
   opacity: 0.8;
   text-align: center;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     content: '"';
     color: $accent-color;
     margin: 0 calc(#{$default-spacing} / 2);
