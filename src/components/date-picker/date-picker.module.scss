@@ -1,0 +1,24 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.datePicker {
+  @include input-appearance-styles;
+
+  :global {
+    .anticon-calendar {
+      color: $accent-color;
+    }
+
+    .ant-picker-input input {
+      @include input-text-styles;
+    }
+  }
+}
+
+.datePickerError {
+  :global {
+    .anticon-calendar {
+      color: $validation-error-color;
+    }
+  }
+}

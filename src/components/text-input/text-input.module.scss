@@ -1,0 +1,16 @@
+@import '../../styles/colors.scss';
+@import '../../styles/mixins.scss';
+
+.textInputWrapper {
+  :global {
+    .ant-input,
+    .ant-input-affix-wrapper {
+      @include input-appearance-styles;
+      @include input-text-styles;
+    }
+
+    .anticon-info-circle {
+      color: $accent-color !important;
+    }
+  }
+}

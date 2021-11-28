@@ -1,0 +1,35 @@
+@import '../../styles/colors.scss';
+
+$button-content-font-size: 22px;
+$button-height: 40px;
+$button-min-width: 150px;
+
+.button {
+  border-width: 0;
+  min-width: $button-min-width;
+  height: $button-height;
+  font-size: $button-content-font-size;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primaryButton {
+  background: $accent-color;
+
+  &:hover {
+    background: darken($accent-color, 20);
+  }
+}
+
+.ghostButton {
+  color: $accent-color;
+  border: 1px solid $accent-color;
+
+  &:hover {
+    background: darken($accent-color, 20);
+    border: 1px solid darken($accent-color, 20);
+    color: $content-background;
+  }
+}

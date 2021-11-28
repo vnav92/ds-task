@@ -1,8 +1,10 @@
 @import '../../styles/spacing.scss';
+@import '../../styles/colors.scss';
 
 .header {
-  font-size: calc(#{$default-spacing} * 5);
+  font-size: calc(#{$default-spacing} * 6);
   margin: 0 0 calc(#{$default-spacing} / 2);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 300;
+  font-weight: 100;
+  color: $white-color;
+  opacity: 0.8;
 }

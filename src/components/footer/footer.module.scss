@@ -11,7 +11,15 @@ $icon-size: 24px;
   background: $primary-color;
 }
 
+.footerText {
+  font-size: 14px;
+  color: $white-color;
+  opacity: 0.6;
+}
+
 .icon {
   font-size: $icon-size;
   margin-top: $default-spacing;
+  color: $accent-color;
+  opacity: 0.75;
 }

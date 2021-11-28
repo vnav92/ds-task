@@ -1,5 +1,8 @@
 export { MainLayout } from './main-layout';
+export { Modal } from './modal';
+export { Button } from './button';
 export { DatePicker } from './date-picker';
+export { FormLegend } from './form-legend';
 export { Footer } from './footer';
 export { TextInput } from './text-input';
 export { FormGroup } from './form-group';
@@ -9,3 +12,4 @@ export { TextArea } from './text-area';
 export { ImageUpload } from './image-upload';
 export { Text } from './text';
 export { Title } from './title';
+export { PropertyValue } from './property-value';

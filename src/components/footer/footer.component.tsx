@@ -9,7 +9,9 @@ const LINKED_IN_HREF =
 
 export const Footer = () => (
   <footer className={styles.footerWrapper}>
-    <Text>Designed and implemented by Mateusz Jankowski</Text>
+    <Text className={styles.footerText}>
+      Designed and implemented by Mateusz Jankowski (2021)
+    </Text>
     <a href={LINKED_IN_HREF} target="_blank" rel="noreferrer">
       <LinkedinOutlined className={styles.icon} />
     </a>

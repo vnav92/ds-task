@@ -1,7 +1,38 @@
-.formItem {
+@import '../../styles/colors.scss';
+@import '../../styles/spacing.scss';
+
+$label-font-size: 16px;
+
+.formItemWrapper {
+  background: transparent;
   :global {
     .ant-form-item-label {
       padding-bottom: 0;
     }
+
+    .ant-form-item-has-error
+      :not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+    .ant-form-item-has-error
+      :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+    .ant-form-item-has-error .ant-input-number,
+    .ant-form-item-has-error .ant-picker {
+      background: transparent;
+    }
+
+    .ant-form-item-has-error .ant-picker:not([disabled]):hover {
+      background: transparent;
+    }
+
+    .ant-form-item-label label {
+      opacity: 0.8;
+      color: $white-color;
+      font-size: $label-font-size;
+      font-weight: 200;
+    }
   }
+}
+
+.requiredMarker {
+  color: $accent-color;
+  margin-left: calc(#{$default-spacing} / 4);
 }

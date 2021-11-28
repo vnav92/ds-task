@@ -1,37 +1,54 @@
-import { Formik, Form as FormikForm, Field } from 'formik';
+import { useState } from 'react';
+import { Formik, Form as FormikForm, Field, FormikState } from 'formik';
 
 import {
   PageHeading,
   FormGroup,
+  FormLegend,
   TextInput,
   DatePicker,
   TextArea,
   ImageUpload,
+  Button,
+  Modal,
+  Text,
 } from '../../components';
 import { Row, Col } from 'antd';
 import { useNavigate } from 'react-router';
 
 import { ApplicationRoutes } from '../../components/navigation/navigation.const';
-import { saveData, fetchData } from '../../api';
+import { saveData, fetchData, resetData } from '../../api';
 import { formInitialValues, validationSchema } from './form.form';
-
 export const Form: React.FC<any> = () => {
   const navigate = useNavigate();
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleSubit = (data: typeof formInitialValues) => {
     saveData(data);
     navigate(ApplicationRoutes.PROFILE);
   };
 
+  const handleReset = (
+    resetFormCb: (
+      values: Partial<FormikState<typeof formInitialValues>>
+    ) => void
+  ) => {
+    resetData();
+    resetFormCb({});
+    setIsModalVisible(false);
+  };
+
   return (
     <>
       <PageHeading>Form</PageHeading>
+      <FormLegend marginBottom={10} />
       <Formik
         initialValues={fetchData() || formInitialValues}
         onSubmit={handleSubit}
         validationSchema={validationSchema}
+        enableReinitialize={true}
       >
-        {({ errors, touched }) => (
+        {({ errors, touched, resetForm }) => (
           <FormikForm>
             <Row gutter={5}>
               <Col xs={24} sm={12}>
@@ -110,7 +127,25 @@ export const Form: React.FC<any> = () => {
                 </FormGroup>
               </Col>
             </Row>
-            <button type="submit">click</button>
+            <Row gutter={[10, 10]}>
+              <Col>
+                <Button htmlType="submit" type="primary">
+                  Save
+                </Button>
+              </Col>
+              <Col>
+                <Button type="ghost" onClick={() => setIsModalVisible(true)}>
+                  Reset
+                </Button>
+              </Col>
+            </Row>
+            <Modal
+              visible={isModalVisible}
+              onOk={() => handleReset(resetForm)}
+              onCancel={() => setIsModalVisible(false)}
+            >
+              <Text>Are you sure, you would like to reset form data?</Text>
+            </Modal>
           </FormikForm>
         )}
       </Formik>
