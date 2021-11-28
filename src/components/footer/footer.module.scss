@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+@import '../../styles/spacing.scss';
+
+$icon-size: 24px;
+
+.footerWrapper {
+  padding: calc(#{$default-spacing} * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $primary-color;
+}
+
+.icon {
+  font-size: $icon-size;
+  margin-top: $default-spacing;
+}

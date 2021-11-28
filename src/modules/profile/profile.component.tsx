@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Avatar, Typography } from 'antd';
-import { PageHeading } from '../../components/page-heading/page-heading.component';
+import { Avatar } from 'antd';
+import { PageHeading, Text, Title } from '../../components';
 import { fetchData } from '../../api';
 import { formInitialValues } from '../form/form.form';
 
 import styles from './profile.module.scss';
-
-const { Title, Text } = Typography;
 
 export const Profile = () => {
   const [profileData, setProfileData] = useState<

@@ -1,12 +1,23 @@
 @import '../../styles/spacing.scss';
 
 .wrapper {
-  height: 100%;
   display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.contentWrapper {
+  display: flex;
+  flex: 1;
 }
 
 .content {
   padding: calc(#{$default-spacing} * 2);
   width: 100%;
+  margin-left: $nav-wrapper-width;
+  height: 100%;
+}
+
+.footer {
   margin-left: $nav-wrapper-width;
 }

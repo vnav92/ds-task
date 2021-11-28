@@ -1,8 +1,11 @@
 export { MainLayout } from './main-layout';
 export { DatePicker } from './date-picker';
+export { Footer } from './footer';
 export { TextInput } from './text-input';
 export { FormGroup } from './form-group';
 export { Navigation } from './navigation';
 export { PageHeading } from './page-heading';
 export { TextArea } from './text-area';
 export { ImageUpload } from './image-upload';
+export { Text } from './text';
+export { Title } from './title';
