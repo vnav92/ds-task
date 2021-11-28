@@ -28,33 +28,64 @@ export const Profile = () => {
             size={{ xs: 150, sm: 200, md: 200, lg: 200, xl: 200, xxl: 200 }}
           />
           <Row>
-          <Text className={classNames(styles.dataProperty, styles.userName)}>
-            {profileData.firstName} {profileData.lastName}
-          </Text>
+            <Text className={classNames(styles.dataProperty, styles.userName)}>
+              {profileData.firstName} {profileData.lastName}
+            </Text>
           </Row>
           <Row>
-            <Text className={classNames(styles.dataProperty, styles.userBirthdayDate)}>{profileData.birthdayDate}</Text>
+            <Text
+              className={classNames(
+                styles.dataProperty,
+                styles.userBirthdayDate
+              )}
+            >
+              {profileData.birthdayDate}
+            </Text>
           </Row>
           <Row justify="center">
-            <div className={classNames(styles.contactSection, styles.sectionMarginTop)}>
+            <div
+              className={classNames(
+                styles.contactSection,
+                styles.sectionMarginTop
+              )}
+            >
               <Row className={styles.textLink}>
-                <Text className={classNames(styles.contactDataProperty, styles.dataProperty)}>{profileData.phoneNumber}</Text>
+                <Text
+                  className={classNames(
+                    styles.contactDataProperty,
+                    styles.dataProperty
+                  )}
+                >
+                  {profileData.phoneNumber}
+                </Text>
                 <Anchor href={`tel:${profileData.phoneNumber}`}>
-                  <ArrowRightOutlined className={styles.linkIcon}/>
+                  <ArrowRightOutlined className={styles.linkIcon} />
                 </Anchor>
               </Row>
               <Row className={styles.textLink}>
-                <Text className={classNames(styles.contactDataProperty, styles.dataProperty)}>{profileData.emailAddress}</Text>
+                <Text
+                  className={classNames(
+                    styles.contactDataProperty,
+                    styles.dataProperty
+                  )}
+                >
+                  {profileData.emailAddress}
+                </Text>
                 <Anchor href={`mailto:${profileData.emailAddress}`}>
-                <ArrowRightOutlined className={styles.linkIcon} />
+                  <ArrowRightOutlined className={styles.linkIcon} />
                 </Anchor>
               </Row>
             </div>
           </Row>
           <Row justify="center">
-          <div className={classNames(styles.aboutSection, styles.sectionMarginTop)}>
-            <Text className={styles.dataProperty}>{profileData.about}</Text>
-          </div>
+            <div
+              className={classNames(
+                styles.aboutSection,
+                styles.sectionMarginTop
+              )}
+            >
+              <Text className={styles.dataProperty}>{profileData.about}</Text>
+            </div>
           </Row>
         </div>
       ) : (
