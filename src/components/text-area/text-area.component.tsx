@@ -7,9 +7,13 @@ import styles from './text-area.module.scss';
 
 export const TextArea: React.FC<
   FieldProps & ComponentProps<typeof Input.TextArea>
-> = ({ field, form, ...props }) => (
+> = ({ field, form, className, ...props }) => (
   <>
-    <Input.TextArea {...field} {...props} />
+    <Input.TextArea
+      {...field}
+      {...props}
+      className={classNames(styles.textArea, className)}
+    />
     <div
       className={classNames(styles.lengthCounter, {
         [styles.lengthCounterError]:

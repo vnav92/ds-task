@@ -41,7 +41,7 @@ export const validationSchema = Yup.object().shape({
   birthdayDate: Yup.string().required('Required'),
   about: Yup.string()
     .required('Required')
-    .min(5, getTooShortMessage(10))
+    .min(10, getTooShortMessage(10))
     .max(500, getTooLongMessage('Description', 500)),
   avatar: Yup.string().required('Required'),
 });

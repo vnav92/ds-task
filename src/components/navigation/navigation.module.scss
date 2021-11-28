@@ -31,11 +31,15 @@
 .icon {
   width: 100%;
   font-size: 26px;
-  padding: calc(#{$default-spacing} / 1.5) 0;
-  color: $white-color;
+  padding: calc(#{$default-spacing} * 1.25) 0;
+  color: $text-color;
+
+  &:hover {
+    background: $gray-color;
+  }
 }
 
 .activeIcon {
-  color: $primary-color;
-  background: white;
+  color: $text-color;
+  background: $gray-color;
 }

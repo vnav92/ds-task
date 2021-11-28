@@ -13,3 +13,7 @@ export const fetchData = () => {
     return JSON.parse(localStorageData);
   }
 };
+
+export const resetData = () => {
+  localStorage.removeItem(LOCAL_STORAGE_KEY);
+};

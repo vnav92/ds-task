@@ -7,18 +7,22 @@ import classNames from 'classnames';
 import styles from './image-upload.module.scss';
 
 const IMAGE_MAX_MEGABYTES = 3;
+const IMAGE_UPLOAD_BUTTON_CONTENT = '+';
 
-export const ImageUpload: React.FC<FieldProps> = ({
+type ImageUploadProps = {
+  className?: string;
+};
+
+export const ImageUpload: React.FC<FieldProps & ImageUploadProps> = ({
   field,
   form,
+  className,
   ...props
 }) => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    if (field.value) {
-      setImageUrl(field.value);
-    }
+    setImageUrl(field.value ? field.value : null);
   }, [field.value]);
 
   const getBase64 = (
@@ -46,10 +50,14 @@ export const ImageUpload: React.FC<FieldProps> = ({
     <Upload
       name="avatar"
       listType="picture-card"
-      className={classNames({
-        [styles.imageUploadError]:
-          form.errors[field.name] && form.touched[field.name],
-      })}
+      className={classNames(
+        {
+          [styles.imageUploadError]:
+            form.errors[field.name] && form.touched[field.name],
+        },
+        styles.datePicker,
+        className
+      )}
       showUploadList={false}
       beforeUpload={beforeUpload}
       customRequest={() => {}}
@@ -64,7 +72,9 @@ export const ImageUpload: React.FC<FieldProps> = ({
       {imageUrl ? (
         <img src={imageUrl} alt="avatar" style={{ width: '100%' }} />
       ) : (
-        '+'
+        <span className={styles.imageUploadButtonContent}>
+          {IMAGE_UPLOAD_BUTTON_CONTENT}
+        </span>
       )}
     </Upload>
   );

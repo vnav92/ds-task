@@ -1,0 +1,14 @@
+@import '../../styles/colors.scss';
+@import '../../styles/spacing.scss';
+
+.formLegend {
+  color: $text-color;
+  opacity: 0.7;
+  display: block;
+  font-weight: 200;
+}
+
+.requiredMarker,
+.coloredText {
+  color: $accent-color;
+}

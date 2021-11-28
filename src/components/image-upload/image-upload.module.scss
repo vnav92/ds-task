@@ -1,7 +1,27 @@
+@import '../../styles/colors.scss';
+
+$image-upload-button-content-font-size: 36px;
+
+.datePicker {
+  :global {
+    .ant-upload {
+      background: transparent;
+      border-color: $accent-color;
+    }
+  }
+}
+
 .imageUploadError {
   :global {
     .ant-upload-select .ant-upload {
-      border: 1px solid red;
+      border: 1px solid $validation-error-color;
     }
   }
+}
+
+.imageUploadButtonContent {
+  color: $accent-color;
+  font-size: $image-upload-button-content-font-size;
+  opacity: 0.7;
+  font-weight: 100;
 }

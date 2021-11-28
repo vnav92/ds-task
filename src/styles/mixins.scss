@@ -1,0 +1,11 @@
+@import './colors.scss';
+
+@mixin input-text-styles {
+  color: $text-color;
+  opacity: 0.7;
+}
+
+@mixin input-appearance-styles {
+  background: transparent;
+  border: 1px solid $accent-color;
+}
