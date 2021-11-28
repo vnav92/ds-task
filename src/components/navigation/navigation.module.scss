@@ -32,7 +32,7 @@
   width: 100%;
   font-size: 26px;
   padding: calc(#{$default-spacing} * 1.25) 0;
-  color: $white-color;
+  color: $text-color;
 
   &:hover {
     background: $gray-color;
@@ -40,6 +40,6 @@
 }
 
 .activeIcon {
-  color: $white-color;
+  color: $text-color;
   background: $gray-color;
 }
